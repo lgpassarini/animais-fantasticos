@@ -3,7 +3,7 @@ import initAccordion from "./modules/acordion.js";
 import initScrollSuave from "./modules/scroll-suave.js";
 import initScrollAtivar from "./modules/scroll-ativar.js";
 import initModal from "./modules/modal.js";
-import initToolTip from "./modules/tooltip.js";
+import initToolTip from "./modules/tooltipbox.js";
 
 initTabNav();
 initAccordion();
