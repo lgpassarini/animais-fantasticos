@@ -8,7 +8,7 @@ export default function initScrollAtivar() {
         const sectionTop = item.getBoundingClientRect().top - windowMetade;
         if (sectionTop < 0) {
           item.classList.add("ativo");
-        } else {
+        } else if (item.classList.contains("ativo")) {
           item.classList.remove("ativo");
         }
       });
