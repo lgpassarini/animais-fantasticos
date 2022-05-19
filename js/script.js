@@ -6,7 +6,9 @@ import initModal from "./modules/modal.js";
 import initToolTip from "./modules/tooltipbox.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import initNumeros from "./modules/numeros.js";
+import initFuncionamento from "./modules/funcionamento.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
+import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
 initTabNav();
 initAccordion();
@@ -16,4 +18,6 @@ initModal();
 initToolTip();
 initDropdownMenu();
 initMenuMobile();
-initNumeros();
+initFuncionamento();
+initFetchAnimais();
+initFetchBitcoin();
