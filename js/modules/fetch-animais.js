@@ -1,6 +1,13 @@
 import initNumeros from "./numeros.js";
 
 export default function initFetchAnimais() {
+  function createAnimal(animal) {
+    const div = document.createElement("div");
+    div.classList.add("numero-animal");
+    div.innerHTML = `<h3>${animal.especie}</h3><span data-numero>${animal.total}</span>`;
+    return div;
+  }
+
   async function fetchAnimais(url) {
     const response = await fetch(url);
     const animaisJson = await response.json();
@@ -10,13 +17,6 @@ export default function initFetchAnimais() {
       numeros.appendChild(divAnimal);
     });
     initNumeros();
-  }
-
-  function createAnimal(animal) {
-    const div = document.createElement("div");
-    div.classList.add("numero-animal");
-    div.innerHTML = `<h3>${animal.especie}</h3><span data-numero>${animal.total}</span>`;
-    return div;
   }
 
   fetchAnimais("./animaisapi.json");
