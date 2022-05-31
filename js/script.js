@@ -1,4 +1,4 @@
-import initTabNav from "./modules/tab-nav.js";
+import TabNav from "./modules/tab-nav.js";
 import Accordion from "./modules/acordion.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import initScrollAtivar from "./modules/scroll-ativar.js";
@@ -16,7 +16,9 @@ scrollSuave.init();
 const accordionList = new Accordion(".faq dl dt");
 accordionList.init();
 
-initTabNav();
+const tabNav = new TabNav(".animais-lista img", ".animais-descricao section");
+tabNav.init();
+
 initScrollAtivar();
 initModal();
 initToolTip();

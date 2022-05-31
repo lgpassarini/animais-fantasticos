@@ -134,13 +134,15 @@ body {
   display: none;
 }
 
-.animais-descricao section.show-right {
+.js .animais-descricao section.ativo {
   display: block;
+}
+
+.animais-descricao section.show-right {
   animation: show-right 0.5s forwards;
 }
 
 .animais-descricao section.show-down {
-  display: block;
   animation: show-down 0.5s forwards;
 }
 

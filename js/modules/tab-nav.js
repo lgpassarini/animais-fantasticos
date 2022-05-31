@@ -1,23 +1,28 @@
-export default function iniTabNav() {
-  const img = document.querySelectorAll(".animais-lista img");
-  const descricao = document.querySelectorAll(".animais-descricao section");
+export default class TabNav {
+  constructor(menu, content) {
+    this.tabMenu = document.querySelectorAll(menu);
+    this.tabContent = document.querySelectorAll(content);
+    this.activeClass = "ativo";
+  }
 
-  function classe(event) {
-    const imgClasse = event.currentTarget.classList;
-    descricao.forEach((item) => {
-      const direcao = item.dataset.anime;
-      item.classList.remove("ativo", direcao);
-      if (item.classList.contains(imgClasse)) {
-        item.classList.add("ativo", direcao);
-      }
+  activeTab(index) {
+    this.tabContent.forEach((section) => {
+      section.classList.remove(this.activeClass);
+    });
+    const direcao = this.tabContent[index].dataset.anime;
+    this.tabContent[index].classList.add(this.activeClass, direcao);
+  }
+
+  addTabNavEvent() {
+    this.tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener("click", () => this.activeTab(index));
     });
   }
 
-  function handleClick(item) {
-    item.addEventListener("click", classe);
-  }
-
-  if (img.length && descricao.length) {
-    img.forEach(handleClick);
+  init() {
+    if (this.tabMenu.length && this.tabContent.length) {
+      this.activeTab(0);
+      this.addTabNavEvent();
+    }
   }
 }
