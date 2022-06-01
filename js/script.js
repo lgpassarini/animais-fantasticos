@@ -1,7 +1,7 @@
 import TabNav from "./modules/tab-nav.js";
 import Accordion from "./modules/acordion.js";
 import ScrollSuave from "./modules/scroll-suave.js";
-import initScrollAtivar from "./modules/scroll-ativar.js";
+import ScrollAnima from "./modules/scroll-anima.js";
 import initModal from "./modules/modal.js";
 import initToolTip from "./modules/tooltipbox.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
@@ -19,7 +19,9 @@ accordionList.init();
 const tabNav = new TabNav(".animais-lista img", ".animais-descricao section");
 tabNav.init();
 
-initScrollAtivar();
+const scrollAnima = new ScrollAnima(".js-scroll");
+scrollAnima.init();
+
 initModal();
 initToolTip();
 initDropdownMenu();
